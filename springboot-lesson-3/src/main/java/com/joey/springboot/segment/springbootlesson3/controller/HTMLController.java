@@ -25,6 +25,12 @@ public class HTMLController {
         return "<html><body>hello , world</body></html>";
     }
 
+    @GetMapping("/test")
+    public String test(@RequestParam String token){
+        System.out.println(token);
+        return token;
+    }
+
 
     @GetMapping("/html/demo/header")
     public String head(@RequestHeader(value = "Accept") String auth){
