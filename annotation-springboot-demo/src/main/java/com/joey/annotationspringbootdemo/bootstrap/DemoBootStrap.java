@@ -30,5 +30,7 @@ public class DemoBootStrap {
 
         Object hello = context.getBean("helloWorld");
         System.out.println(hello);
+
+        context.close();
     }
 }

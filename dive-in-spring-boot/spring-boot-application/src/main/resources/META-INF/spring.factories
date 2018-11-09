@@ -1,0 +1,16 @@
+# Initializers 初始化
+org.springframework.context.ApplicationContextInitializer=\
+com.joey.springbootapplication.context.AfterHelloWorldApplicationContextInitializer,\
+com.joey.springbootapplication.context.HelloWorldApplicationContextInitializer
+
+
+# Application Listeners
+org.springframework.context.ApplicationListener=\
+com.joey.springbootapplication.listener.AfterHelloWorldApplicationListener,\
+com.joey.springbootapplication.listener.HelloWorldApplicationListener,\
+com.joey.springbootapplication.listener.BeforeConfigFileApplicationListener
+
+
+# Run Listeners 运行监听器配置
+org.springframework.boot.SpringApplicationRunListener=\
+com.joey.springbootapplication.run.HelloWorldRunListener
