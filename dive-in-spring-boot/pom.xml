@@ -11,6 +11,9 @@
 		<module>autoconfigure</module>
 		<module>spring-boot-application</module>
         <module>spring-webmvc</module>
+        <module>springboot-webmvc</module>
+        <module>springboot-view</module>
+        <module>springboot-rest</module>
     </modules>
     <packaging>pom</packaging>
 
