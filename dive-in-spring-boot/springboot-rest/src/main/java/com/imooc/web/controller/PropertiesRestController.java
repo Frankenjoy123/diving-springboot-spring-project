@@ -16,7 +16,9 @@ public class PropertiesRestController {
 
     @PostMapping(value = "/add/pros"
             , consumes = "text/properties;charset=utf-8") //过滤请求头 content-type媒体类型
-    public Properties add(@RequestBody Properties properties){
+    public Properties add(
+              @RequestBody //RequestResponseBodyMethodProcessor
+                Properties properties){
         return properties;
     }
 }
