@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xsd:schema xmlns="http://www.joey.cn/schema/eventlog/event-client"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:beans="http://www.springframework.org/schema/beans"
+            targetNamespace="http://www.joey.cn/schema/eventlog/event-client"
+            elementFormDefault="qualified"
+            attributeFormDefault="unqualified">
+
+    <xsd:import namespace="http://www.springframework.org/schema/beans"/>
+    
+    <xsd:element name="config">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="beans:identifiedType">
+
+                    <xsd:attribute name="app-code" type="xsd:string">
+                        <xsd:annotation>
+                            <xsd:documentation><![CDATA[应用code]]></xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:attribute>
+
+                    <xsd:attribute name="debug" type="xsd:boolean" default="false">
+                        <xsd:annotation>
+                            <xsd:documentation><![CDATA[应用code]]></xsd:documentation>
+                        </xsd:annotation>
+                    </xsd:attribute>
+
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
+
+</xsd:schema>

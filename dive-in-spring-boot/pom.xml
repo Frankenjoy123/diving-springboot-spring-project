@@ -15,7 +15,8 @@
         <module>springboot-view</module>
         <module>springboot-rest</module>
         <module>spring-servlet</module>
-    </modules>
+		<module>event-log-demo</module>
+	</modules>
     <packaging>pom</packaging>
 
 	<name>dive-in-spring-boot</name>
