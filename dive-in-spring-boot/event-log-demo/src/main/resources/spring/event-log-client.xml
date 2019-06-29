@@ -12,4 +12,11 @@
     <!-- 基本配置 -->
     <event-client:config app-code="hello-app-demo" debug="true"/>
 
+    <event-client:monitor monitor-name="my-pig">
+        <event-client:monitor-item follow="red"/>
+        <event-client:monitor-item follow="green"/>
+    </event-client:monitor>
+
+    <event-client:scan scan-packages="com.joey.event.log.demo"/>
+
 </beans>

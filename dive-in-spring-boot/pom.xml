@@ -16,6 +16,7 @@
         <module>springboot-rest</module>
         <module>spring-servlet</module>
 		<module>event-log-demo</module>
+		<module>spring-annotaion-context</module>
 	</modules>
     <packaging>pom</packaging>
 

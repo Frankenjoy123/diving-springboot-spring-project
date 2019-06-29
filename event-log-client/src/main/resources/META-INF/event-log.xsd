@@ -7,6 +7,9 @@
             attributeFormDefault="unqualified">
 
     <xsd:import namespace="http://www.springframework.org/schema/beans"/>
+
+    <!-- 基本配置 -->
+    <!--<event-client:config app-code="hello-app-demo" debug="true"/>-->
     
     <xsd:element name="config">
         <xsd:complexType>
@@ -24,7 +27,40 @@
                             <xsd:documentation><![CDATA[应用code]]></xsd:documentation>
                         </xsd:annotation>
                     </xsd:attribute>
+                </xsd:extension>
+            </xsd:complexContent>
+        </xsd:complexType>
+    </xsd:element>
 
+
+    <!--用法-->
+    <!--<event-client:monitor monitor-name="my-pig">-->
+        <!--<event-client:monitor-item follow="red"/>-->
+        <!--<event-client:monitor-item follow="green"/>-->
+    <!--</event-client:monitor>-->
+    <!---->
+
+    <xsd:element name="monitor">
+        <xsd:complexType>
+            <!--sequence得先写 最少出现1次-->
+            <xsd:sequence minOccurs="1" maxOccurs="unbounded">
+                <xsd:element name="monitor-item">
+                    <xsd:complexType>
+                        <xsd:attribute name="follow"/>
+                    </xsd:complexType>
+                </xsd:element>
+            </xsd:sequence>
+            <xsd:attribute name="monitor-name" type="xsd:string"/>
+        </xsd:complexType>
+    </xsd:element>
+
+    <!--用法-->
+    <!--<event-client:scan scan-packages="com.joey.event.log.demo"/>-->
+    <xsd:element name="scan">
+        <xsd:complexType>
+            <xsd:complexContent>
+                <xsd:extension base="beans:identifiedType">
+                    <xsd:attribute name="scan-packages"/>
                 </xsd:extension>
             </xsd:complexContent>
         </xsd:complexType>

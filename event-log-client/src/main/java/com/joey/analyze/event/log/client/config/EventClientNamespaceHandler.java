@@ -10,5 +10,7 @@ public class EventClientNamespaceHandler extends NamespaceHandlerSupport{
     @Override
     public void init() {
         registerBeanDefinitionParser("config", new EventConfigBeanDefinitionParser());
+        registerBeanDefinitionParser("monitor",new MonitorBeanDefinitionParser());
+        registerBeanDefinitionParser("scan",new EventScanBeanDefinitionParser());
     }
 }
